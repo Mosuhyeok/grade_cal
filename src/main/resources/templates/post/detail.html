@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
+
+<head>
+<!--    <link rel="stylesheet" href="/css/detail.css">-->
+</head>
+<div layout:fragment="content">
+
+    <br>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>작성자</th>
+            <th>제목</th>
+            <th>조회수</th>
+            <th>작성날짜</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text= "${dto.author}"></td>
+            <td th:text="${dto.title}"></td>
+            <td>1</td>
+            <td th:text="${dto.date}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <p th:text="${dto.content}"></p>
+</div>
+
+
+</html>

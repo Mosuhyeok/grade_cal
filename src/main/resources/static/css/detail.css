@@ -1,0 +1,13 @@
+.post_table{
+    border-style: hidden;
+    border-collapse: collapse;
+}
+.post_table th, .post_table td {
+    border:1px solid black;
+}
+.post_table th{
+    width:100px;
+}
+.post_table td{
+    width:300px;
+}

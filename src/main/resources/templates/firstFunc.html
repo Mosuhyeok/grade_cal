@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
+
+<head>
+    <script src="/js/firstFunc.js"></script>
+    <link rel="stylesheet" href="css/firstFunc.css">
+</head>
+
+<div layout:fragment="content">
+    <button id="btn-add">추가하기</button>
+    <table id="table">
+        <th>점수</th>
+        <th>학점</th>
+        <th>전공</th>
+        <tr>
+            <td>
+                <select name="grade">
+                    <option value=""selected disabled hidden>학점</option>
+                    <option value="4.5">A+</option>
+                    <option value="4.0">A0</option>
+                    <option value="3.5">B+</option>
+                    <option value="3.0">B0</option>
+                    <option value="2.5">C+</option>
+                    <option value="2.0">C0</option>
+                    <option value="1.5">D+</option>
+                    <option value="1.0">D0</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+
+            <td>
+                <input type="text" name="score">
+            </td>
+
+            <td>
+                <input type="checkbox" name="major">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="제출하기" id="btn-submit">
+
+
+    <div class="cal_result">
+        <table>
+            <th>총 학점</th>
+            <th>총 평점</th>
+            <tr>
+                <td id="totalScore"></td>
+                <td id="totalGrade"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</html>

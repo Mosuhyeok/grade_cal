@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
+
+<head>
+    <script src="/js/secondFunc.js"></script>
+    <link rel="stylesheet" href="css/secondFuc.css">
+</head>
+<div layout:fragment="content">
+    <table border="1">
+        <tr>
+            <th colspan="2">이전학기</th>
+            <th colspan="2">이번학기</th>
+        </tr>
+        <tr>
+            <th>수강학점</th>
+            <th>수강평점</th>
+            <th>수강학점</th>
+            <th>목표평점</th>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="text" id="allScore">
+            </td>
+            <td>
+                <input type="text" id="allGrade">
+            </td>
+            <td>
+                <input type="text" id="nowScore">
+            </td>
+            <td>
+                <input type="text" id="nowGrade">
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" id="secondSubmit">
+
+
+        <p>학점범위 오차가 +0.1, -0.1 있을 수 있습니다. 결과 값이 불가능인 경우 이번학기에 4.5를 받아도 달성하지 못하는 것 입니다.</p>
+    <div class="second_result">
+        <table>
+            <tr>
+                <th>결과값</th>
+                <th id="secondResult"></th>
+            </tr>
+        </table>
+    </div>
+</div>
+</html>

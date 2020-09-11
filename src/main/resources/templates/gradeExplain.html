@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
+
+<head>
+    <script src="/js/gradeExplain.js"></script>
+</head>
+<div layout:fragment="content">
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>1번 계산기</h1>
+            <p>이번학기에 수강한 학점 + 평점을 입력하여 평균학점을 알 수 있는 계산기 입니다.</p>
+            <button type="button" class="btn btn-secondary btn-lg" id="first_cal">계산하기!</button>
+        </div>
+        <div class="col-md-6">
+            <h1>2번 계산기</h1>
+            <p>여태까지 수강한 총 평점 + 총 학점을 바탕으로 목표학점을 구할수 있습니다</p>
+            <p>예) 3학년 1학기까지 90학점을 수강하고 평점은 3.5일 경우 3학년 2학기를 수강 한 후 총 평점이 3.7이 되고 싶다면 이번 학기에 평점을 몇 이상 받아야 하나?</p>
+            <button type="button" class="btn btn-secondary btn-lg" id="second_cal">계산하기!</button>
+        </div>
+    </div>
+</div>
+
+
+</html>
