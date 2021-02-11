@@ -17,7 +17,7 @@ public class PostController {
 
     private final PostsService postsService;
 
-    //게시글 메인
+    //게시글 메인 나중에 페이징 추가하기
     @GetMapping("/postMain")
     public String postMain(Model model){
         List<Posts> list = postsService.findAll();

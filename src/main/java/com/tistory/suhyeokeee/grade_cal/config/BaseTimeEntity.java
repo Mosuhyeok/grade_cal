@@ -1,4 +1,4 @@
-package com.tistory.suhyeokeee.grade_cal.jpaconfig;
+package com.tistory.suhyeokeee.grade_cal.config;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

@@ -12,4 +12,10 @@ public class MemberController {
     public String signUp(){
         return "member/signUp";
     }
+
+
+    @GetMapping("/member/signIn")
+    public String signIn(){
+        return "member/signIn";
+    }
 }

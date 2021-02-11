@@ -1,9 +1,9 @@
 $(function () {
     $('#join-submit').click(function () {
-        var pw1 = $('#inputPassword').val();
-        var pw2 = $('#inputPasswordCheck').val();
-        var name = $('#inputName').val();
-        var user_id = $('#InputId').val();
+        var pw1 = $('#userPassword').val();
+        var pw2 = $('#userPasswordCheck').val();
+        var name = $('#name').val();
+        var user_id = $('#userId').val();
 
         if(name.length==0){
             alert("이름을 입력해주세요");
@@ -19,10 +19,11 @@ $(function () {
         }
         else{
             var data = {
-                'name': $('#inputName').val(),
-                'userId': $('#InputId').val(),
-                'password': $('#inputPassword').val()
+                'name'    : name,
+                'userId'  : user_id,
+                'password': pw1
             }
+            console.log(JSON.stringify(data));
             $.ajax({
                 type: 'POST',
                 url: '/member/signup',
@@ -30,11 +31,15 @@ $(function () {
                 contentType: 'application/json ; charset=utf-8',
                 data: JSON.stringify(data),
             }).done(function () {
-                alert("회원가입이 완료 됐습니다")
+                alert("회원가입이 완료 됐습니다");
                 window.location.href = "/";
             }).fail(function (error) {
                 alert(error);
             })
         }
+    })
+
+    $('#join-cancle').click(function () {
+        location.href="/";
     })
 })

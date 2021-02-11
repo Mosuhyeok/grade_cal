@@ -11,18 +11,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 
-@Component
-public class AppRunner implements ApplicationRunner {
-
-    @Autowired
-    PostsRepository postsRepository;
-
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
-        PostsSaveDto dto = new PostsSaveDto();
-        dto.setAuthor("모수혁");
-        dto.setTitle("제목 1번");
-        dto.setContent("본문입니다 나앙ㄴ란ㅇ랑ㄴ");
-        postsRepository.save(dto.toEntity());
-    }
-}
+//@Component
+//public class AppRunner implements ApplicationRunner {
+//
+//    @Autowired
+//    PostsRepository postsRepository;
+//
+//    @Override
+//    public void run(ApplicationArguments args) throws Exception {
+//        PostsSaveDto dto = new PostsSaveDto();
+//        dto.setAuthor("모수혁");
+//        dto.setTitle("제목 1번");
+//        dto.setContent("본문입니다 나앙ㄴ란ㅇ랑ㄴ");
+//        postsRepository.save(dto.toEntity());
+//    }
+//}

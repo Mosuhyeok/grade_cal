@@ -11,6 +11,7 @@ $(function () {
         var scoreLen = $('input[name=score]').length;
         var scoreArr = [];
 
+        // 자스 배열에 입력한 값
         for(var i=0; i<gradeLen; i++){
             gradeArr.push($('select[name="grade"]').eq(i).val());
         }

@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class IndexController {
 
+
+
+    // 주로 단순한 페이지 이동만을 다루는 controller
+
+
     private final  IndexService indexService;
     @GetMapping("/")
     public String index(){

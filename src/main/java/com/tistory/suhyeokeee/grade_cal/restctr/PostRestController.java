@@ -18,4 +18,6 @@ public class PostRestController {
     public Posts save(@RequestBody PostsSaveDto dto){
         return postsService.save(dto);
     }
+
+    //나중에 update delete 등 추가할때 SecurityConfig도 설정추가하기
 }
