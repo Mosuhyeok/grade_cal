@@ -25,7 +25,7 @@ public class Posts extends BaseTimeEntity {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Lob    // 썸머노트 사용위한 대용량 데이터 Lob사용
     private String content;
 
     @Column

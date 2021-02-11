@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="layouts/layout">
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layouts/layout"
+>
 <head>
     <script src="/js/post/postSave.js"></script>
 </head>
-
 <div layout:fragment="content">
-    <h1> 게시글 등록</h1>
-    <div class="col-md-12">
-        <div class="col-md-4">
+    <div class="container">
             <form>
                 <div class="form-group">
                     <label for="author"> 작성자</label>
@@ -23,14 +22,20 @@
 
                 <div class="form-group">
                     <label for="content"> 내용</label>
-                    <textarea cols="50" rows="20" id="content"></textarea>
+                    <textarea class="summernote" id="content"></textarea>
                 </div>
             </form>
 
             <button type="button" class="btn btn-primary" id="btn-save">등록</button>
             <a href="/" role="button" class="btn btn-secondary">취소</a>
-        </div>
-    </div>
-</div>
 
+    </div>
+    <script>
+        $('.summernote').summernote({
+            placeholder: 'Hello Bootstrap 4',
+            tabsize: 2,
+            height: 300
+        });
+    </script>
+</div>
 </html>

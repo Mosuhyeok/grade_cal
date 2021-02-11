@@ -1,8 +1,6 @@
 package com.tistory.suhyeokeee.grade_cal.auth;
 
 import com.tistory.suhyeokeee.grade_cal.domain.member.Member;
-import com.tistory.suhyeokeee.grade_cal.domain.member.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
