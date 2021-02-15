@@ -1,8 +1,8 @@
 package com.tistory.suhyeokeee.grade_cal.dto.posts;
 
 import com.tistory.suhyeokeee.grade_cal.domain.post.Posts;
+import com.tistory.suhyeokeee.grade_cal.dto.member.MemberDto;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -10,15 +10,16 @@ import java.time.LocalDateTime;
 public class PostsResponseDto {
 
     private String title;
-    private String author;
     private String content;
+    private int cnt;
     private LocalDateTime date;
-
+    private MemberDto member;
     public PostsResponseDto(Posts entity){
         this.title = entity.getTitle();
-        this.author = entity.getAuthor();
         this.content = entity.getContent();
         this.date = entity.getModifiedDate();
-    }
+        this.cnt = entity.getCnt();
+        member = entity.getMember().toDto(member);
 
+    }
 }

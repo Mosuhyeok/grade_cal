@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     <header th:fragment="header">
-        <div class="container-fluid" style="padding:0">
-            <ul class="underline-hover">
-                <li><a href="/">Home</a></li>
-                <li><a href="/gradeExplain">학점계산</a></li>
-                <li><a href="/postMain">게시판</a></li>
-                <li> <a href="/member/signIn">로그인</a></li>
-                <li> <a href="/member/signup">회원가입</a></li>
-            </ul>
-        </div>
+        <th:block sec:authorize="isAuthenticated()">
+            <div class="container-fluid" style="padding:0">
+                <ul class="underline-hover">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/gradeExplain">학점계산</a></li>
+                    <li><a href="/postMain">게시판</a></li>
+                    <li><a href="/logout">로그아웃</a></li>
+                </ul>
+            </div>
+        </th:block>
+
+        <th:block sec:authorize="!isAuthenticated()">
+            <div class="container-fluid" style="padding:0">
+                <ul class="underline-hover">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/gradeExplain">학점계산</a></li>
+                    <li><a href="/postMain">게시판</a></li>
+                    <li> <a href="/member/signIn">로그인</a></li>
+                    <li> <a href="/member/signup">회원가입</a></li>
+                </ul>
+            </div>
+        </th:block>
+
+<!--            <div class="container-fluid" style="padding:0">-->
+<!--                <ul class="underline-hover">-->
+<!--                    <li><a href="/">Home</a></li>-->
+<!--                    <li><a href="/gradeExplain">학점계산</a></li>-->
+<!--                    <li><a href="/postMain">게시판</a></li>-->
+<!--                    <li> <a href="/member/signIn">로그인</a></li>-->
+<!--                    <li> <a href="/member/signup">회원가입</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
     </header>
 </html>

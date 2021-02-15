@@ -20,9 +20,9 @@
         </thead>
         <tbody>
         <tr>
-            <td th:text= "${dto.author}"></td>
+            <td th:text= "${dto.member.getUserId()}"></td>
             <td th:text="${dto.title}"></td>
-            <td>1</td>
+            <td th:text="${dto.cnt}"></td>
             <td th:text="${dto.date}"></td>
         </tr>
         </tbody>

@@ -59,9 +59,14 @@ public class SecurtyConfig extends WebSecurityConfigurerAdapter {
             .anyRequest().permitAll()
             .and()
             .formLogin()
-            .loginPage("/member/signIn")
-            .loginProcessingUrl("/login")
-            .defaultSuccessUrl("/");
+                .loginPage("/member/signIn")
+                .loginProcessingUrl("/login")
+                .defaultSuccessUrl("/")
+            .and()
+                .logout()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/");
+
     }
 
     @Bean

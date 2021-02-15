@@ -1,8 +1,11 @@
 package com.tistory.suhyeokeee.grade_cal.ctr;
 
+import com.tistory.suhyeokeee.grade_cal.auth.PrincipalDetails;
 import com.tistory.suhyeokeee.grade_cal.service.IndexService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller

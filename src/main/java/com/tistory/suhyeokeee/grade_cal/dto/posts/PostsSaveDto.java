@@ -5,16 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter // Application Runner 쓸 때 사용 할 것 배포시 삭제
+@Setter
 public class PostsSaveDto {
 
-    private String author;
     private String title;
     private String content;
 
     public Posts toEntity(){
         return Posts.builder()
-                .author(author)
                 .title(title)
                 .content(content)
                 .build();

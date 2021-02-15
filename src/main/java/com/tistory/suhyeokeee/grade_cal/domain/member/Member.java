@@ -1,6 +1,7 @@
 package com.tistory.suhyeokeee.grade_cal.domain.member;
 
 import com.tistory.suhyeokeee.grade_cal.domain.post.Posts;
+import com.tistory.suhyeokeee.grade_cal.dto.member.MemberDto;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,6 +39,15 @@ public class Member {
         this.role = role;
     }
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", fetch = FetchType.EAGER)
     private List<Posts> posts;
+
+    public MemberDto toDto(MemberDto dto){
+       return  dto.builder()
+                .name(this.name)
+                .password(this.password)
+                .role(this.role)
+                .userId(this.username)
+                .build();
+    }
 }
